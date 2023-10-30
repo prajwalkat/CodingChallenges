@@ -51,7 +51,7 @@ class Solution {
 
         
         Integer[] b = Arrays.stream(a).boxed().toArray( Integer[]::new );
-        Arrays.sort(b,is);
+        Arrays.parallelSort(b,is);
        // System.out.println(Arrays.toString(b));
 
         for(int i=0;i<b.length;i++){
