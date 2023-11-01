@@ -14,18 +14,13 @@
  * }
  */
 class Solution {
-    public ArrayList<Integer> a=new ArrayList<>();
+    
     HashMap<Integer,Integer> hm=new HashMap<>();
     int max=-1;
     public int[] findMode(TreeNode root) {
         
-        TreeNode q=root;
-        printInorder(q);
-        Object[] c=a.toArray();
-        System.out.println(Arrays.toString(c));
-        Object[] d=hm.values().toArray();
-        System.out.println(Arrays.toString(d) +max);
-        int[] a1=new int[]{1,2};
+       
+        printInorder(root);
         ArrayList<Integer> z=new ArrayList<>();
        
        
@@ -33,7 +28,6 @@ class Solution {
     Integer value = hm.get(key);
     if(value==max){
         z.add(key);
-           System.out.println("Key: " + key + ", Value: " + value);
     }
     
     }
@@ -52,7 +46,7 @@ class Solution {
 
 
 
-        a.clear();
+        
         hm.clear();
         return l;
     }
@@ -64,7 +58,7 @@ class Solution {
  
        
         printInorder(node.left);
-        a.add(node.val);
+       
         if(hm.get(node.val)==null){
             int j=1;
              if(j>max){
